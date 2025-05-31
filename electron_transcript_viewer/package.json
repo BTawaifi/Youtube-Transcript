@@ -1,0 +1,17 @@
+{
+  "name": "electron-transcript-viewer",
+  "version": "1.0.0",
+  "description": "An Electron app that communicates with a Chrome extension",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "latest",
+    "ws": "latest"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "jsdom": "^26.1.0"
+  }
+}

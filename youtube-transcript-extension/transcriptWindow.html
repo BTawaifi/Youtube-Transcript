@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Transcript Viewer</title>
+    <style>
+        #transcriptContainer {
+            height: 250px;
+            width: 300px;
+            overflow: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        #copyButton {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="overflow: hidden; display: flex; flex-direction: column;">
+        <div>
+            <div id="transcriptContainer">Transcript will be displayed here.</div>
+        </div>
+        <div>
+            <button id="copyButton">Copy to Clipboard</button>
+            <label>
+                <input type="checkbox" id="decodeToggle" checked="true"> Decode HTML Entities
+            </label>
+        </div>
+    </div>
+    <script src="transcriptWindow.js"></script>
+</body>
+
+</html>

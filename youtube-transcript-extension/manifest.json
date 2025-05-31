@@ -1,0 +1,44 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Transcript Getter",
+    "version": "1.0",
+    "description":"Easily obtain transcripts from any YouTube video link. Simplify the process for research, study, and accessibility purposes.",
+    "permissions": [
+        "contextMenus",
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icons/icon.png"
+    },
+    "host_permissions": [
+        "*://www.youtube.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://www.youtube.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "pageScript.js"
+            ],
+            "matches": [
+                "*://www.youtube.com/*"
+            ]
+        }
+    ],
+    "icons": {
+        "48": "icons/icon.png"
+    }
+}
